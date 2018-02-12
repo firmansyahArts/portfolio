@@ -1,0 +1,15 @@
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    font-size: 13px;
+    padding: 5px;
+    text-shadow: 0 0 5px #000;
+    margin-top: -40px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+.form-group a img:hover{
+  background: rgba(0, 0, 0, 0.6);
+}

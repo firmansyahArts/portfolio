@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FirmansyahArts</title>
+     <link href="assets/bootstrap/css/lightbox.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/hover1.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/creative.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap/css/creative.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/bootstrap/css/bootstrap.css')?>" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.min.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+
+    @media only screen and (max-width: 1200px){
+          .profile{
+            margin-left: 100px;
+
+          }
+        }
+    @media only screen and (max-width: 991px){
+          .profile{
+            margin-left: 230px;
+
+          }
+        }
+    @media only screen and (max-width: 767px){
+          .profile{
+            margin-left: 50px;
+
+          }
+        }
+        .modal-header{
+          background: #337ab7;
+          color: white;
+          border-radius: 5px 5px 0 0;
+        }
+        .modal-body img{
+          box-shadow: none;
+          border: 2px solid gray;
+        }
+        .modal-body img:hover{
+          box-shadow: 0 0px 10px rgba(0, 0, 0, .5);
+          background: rgba(0, 0, 0, 0.6);
+        }
+    .navbar-collapse{
+        border: 0;
+    }
+    .navbar-toggle{
+        border: 0;
+    }
+        .jumbotron{
+            background-image: url('assets/image/bg-4.png');
+            height: 580px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .jumbotron h1{
+            font-family: 'levibrush', sans-serif;
+            font-size: 80px;
+            padding-top: 10px;
+            color: whitesmoke;
+            text-shadow: 0 0 1px #000;
+        }
+        .jumbotron p{
+            font-family: 'script MT Bold', bold;
+            color: whitesmoke;
+            font-size: 30px;
+            text-shadow: 0 0 1px #000;
+        }
+        #pp{
+            align-items: center;
+            margin-top: -180px;
+            padding-bottom: 40px;
+        }
+       hr {
+          max-width: 50px;
+          border-width: 3px;
+          border-color: #337ab7; }
+
+        hr.light {
+          border-color: white; }
+
+        a {
+          color: #fff;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          transition: all 0.2s; }
+          a:focus, a:hover {
+            color: aqua; }
+
+         #skills {
+            box-shadow: 0 0 10px #000; 
+          padding-bottom: 80px;
+          padding-top: 10px;
+        }
+        #skills img{
+            box-shadow:none;
+        }
+        #skills .container{
+          
+          padding-top: 30px;
+        }
+
+        #about {
+
+            padding-bottom: 150px;
+            padding-top: 40px;
+        }
+         
+        #about i:hover{
+            -webkit-transition:all .3s ease-in-out;
+            transition:all .3s ease-in-out;
+            transform:scale(1.2);
+        }
+        #portofolio {
+            padding-top: 40px;
+            padding-bottom: 20px;
+        } 
+        #portofolio .container-fluid {
+            padding-top: 20px;
+
+        } 
+        #contact {
+            
+            padding-bottom: 30px;
+        }
+        img{
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+        }
+        .service-box img:hover{
+           -webkit-transition:all .3s ease-in-out;
+            transition:all .3s ease-in-out;
+            transform:scale(1.2);
+        }
+        .glyphicon{
+            font-size: 30px;
+        }
+        .navbar-inverse{
+            
+            border-color: transparent;
+
+        }
+        #profile{
+            height: 350px;
+            border: 0px solid red;
+        }
+        #profile li > p{
+            margin-left: -40px;
+        }
+         
+        
+        #skillbox{
+            height: 270px;
+            border: 0px solid red;
+        }
+        .slideanim {visibility:hidden;}
+          .slide { 
+              animation-name: slide;
+              -webkit-animation-name: slide;
+              animation-duration: 1s;
+              -webkit-animation-duration: 1s;
+              visibility: visible;
+          }
+          @keyframes slide {
+            0% {
+              opacity: 0;
+              transform: translateY(70%);
+            } 
+            100% {
+              opacity: 1;
+              transform: translateY(0%);
+            }
+          }
+          @-webkit-keyframes slide {
+            0% {
+              opacity: 0;
+              -webkit-transform: translateY(70%);
+            } 
+            100% {
+              opacity: 1;
+              -webkit-transform: translateY(0%);
+            }
+          }
+          @media screen and (max-width: 768px) {
+            .col-sm-4 {
+              text-align: center;
+              margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+          }
+          @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+            }
+          @media (min-width: 1200px){
+            #profile .intro{
+                text-indent: 20em;
+                margin-left: 50px;
+            }
+          }  
+
+
+
+    </style>
+    </head> 
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="mainNav">
+        <div class="container-fluid">
+            
+            <!-- Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="#" class="navbar-brand js-scroll-trigger"> FirmansyahArts </a>
+            </div>
+
+            <!-- navbar right -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portofolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<div class="jumbotron">
+        <div class="container">
+            <center>
+            <h1>I AM <br> DESIGNER</h1>
+            <p>I Love Creativity Shapes and Colors</p>
+            </center>
+        </div>
+</div>
+
+<div class="container" id="pp">
+    <center>
+    <img src="assets/image/ff.jpg" class="img-circle" height="240px" width="240px">
+    </center>
+</div>
+<section id="about">
+ <div class="container">
+        <div class="row slideanim">
+          <div class="col-lg-12 text-center">
+            <h1 class="section-heading">Profile</h1>
+            <hr class="primary">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row slideanim">
+          <div class="col-lg-3 col-md-6 text-center" id="profile">
+            <div class="service-box">
+              <i class="fa fa-5x fa-user text-primary sr-icons"></i>
+              <h3>Intro</h3>
+              <p class="text-muted text-left profile">
+                  Name &nbsp; &nbsp; &nbsp; &emsp; &emsp; : Feri Firmansyah <br>
+                  Date Of Birth &nbsp; &nbsp; : Serang, 19-02-1999 <br>
+                  Gender &nbsp; &nbsp; &nbsp; &emsp; &nbsp; : Male <br>
+                  Address &nbsp; &nbsp; &nbsp; &emsp;  : Lingk.Karundang Lor <br> &nbsp; &emsp; &emsp; &emsp; &nbsp; &emsp; &emsp; Rt.04/02
+                  Serang<br> &nbsp; &emsp; &emsp; &emsp; &nbsp; &nbsp; &emsp; &nbsp;&nbsp;  Banten <br>
+                  Religion &nbsp; &nbsp; &nbsp; &emsp; : Islam <br>
+                  Country &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Indonesia <br>
+
+
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="profile">
+            <div class="service-box">
+              <i class="fa fa-5x fa-user-secret text-primary sr-icons"></i>
+              <h3>Individual</h3>
+              <p class="text-muted">
+                <ul class="text-muted">
+                  <li> <p> Teamwork</p></li>
+                  <li> <p> Problem Solving</p></li>
+                  <li> <p> Time management</p></li>
+                  <li> <p> Strong Work ethic</p></li>
+                  <li> <p> Positive Attitude</p></li>
+                  <li> <p> Creative</p></li>
+
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="profile">
+            <div class="service-box">
+              <i class="fa fa-5x fa-graduation-cap text-primary sr-icons"></i>
+              <h3>Education</h3>
+              <p class="text-muted text-left">
+                <p style="font-size: 15px; color: gray;"><i class="fa fa-graduation-cap text-center" > </i> SDN TEMBONG 2 <br> 2005 - 2011</p>
+                <p style="font-size: 15px; color: gray;"><i class="fa fa-graduation-cap text-center" > </i> SMPN 9 KOTA SERANG <br> 2011 - 2014</p>
+                <p style="font-size: 15px; color: gray;"><i class="fa fa-graduation-cap text-center" > </i> SMK INFORMATIKA KOTA SERANG <br> 2014 - 2017</p>
+
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="profile">
+            <div class="service-box">
+              <i class="fa fa-5x fa-heart text-primary sr-icons"></i>
+              <h3>Hobbies</h3>
+              <p class="text-muted">
+                <p style="font-size: 19px; color: gray;"><i class="fa fa-pencil text-center" > </i> Drawing </p>
+                <p style="font-size: 19px; color: gray;"><i class="fa fa-gamepad text-center" > </i> Games </p>
+                <p style="font-size: 19px; color: gray;"><i class="fa fa-headphones text-center" > </i> Music </p>
+                
+              </p>
+            </div>
+          </div>
+        </div>
+</div>
+</section>
+
+<section class="bg-primary" id="skills">
+      <div class="container">
+        <div class="row slideanim">
+          <div class="col-lg-12 text-center">
+            <h1 class="section-heading">Skills</h1>
+            <hr class="light">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row slideanim">
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/3ds.png" width="130px" height="130px">
+              <h3>3Ds MAX</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+               <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+              
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/ai.png" width="130px" height="130px">
+              <h3>Adobe Illustrator</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+               <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+              
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/ps.png" width="130px" height="130px">
+              <h3>Adobe Photoshop</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+               <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+             
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/web.png" width="130px" height="130px">
+              <h3>Web Design</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+               <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+             
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/css.png" width="130px" height="130px">
+              <h3>CSS</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+               <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+             
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/html.png" width="130px" height="130px">
+              <h3>HTML</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+                <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+             
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/word.png" width="130px" height="130px">
+              <h3>Microsoft Word</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+               <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+             
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" id="skillbox">
+            <div class="service-box">
+              <img src="assets/image/excel.png" width="130px" height="130px">
+              <h3>Microsoft Excel</h3>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+              <i class="glyphicon glyphicon-star text-white sr-icons"></i>
+               <i class="glyphicon glyphicon-star-empty text-white sr-icons"></i>
+             
+            </div>
+          </div>
+
+
+        </div>
+</div>
+</section>
+
+<section id="portofolio">
+ <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1 class="section-heading">Portfolio</h1>
+            <hr class="primary">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 text-center">
+            <div class="service-box">
+               <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="8"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                    
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="assets/image/logo/1.png">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/logo/2.png">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/logo/3.png">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/logo/4.png">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/logo/5.png">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/logo/6.png">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/logo/7.png">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                </div>
+                 <a href="#myCarousel" class="left carousel-control" role="button" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                 </a>  
+                 <a href="#myCarousel" class="right carousel-control" role="button" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                 </a>
+               </div>
+            </div>
+          </div>
+         
+
+          <div class="col-lg-6 col-md-6 text-left">
+            <div class="service-box">
+              <i ></i>
+              <h2>Logo <br> Design</h2>
+              <p class="text-muted">Here are some examples of design logos i have ever made, i used to participate in contest logo design in Crowdspring, 99Design etc. i also used to use Adobe Illustrator and Adobe Photoshop  software to design logo</p>
+                <button type="button" data-toggle="modal" data-target="#mymodal" class="btn btn-primary btn-lg">See All</button>
+            </div>
+          </div>
+        </div>
+
+ <!--2nd portfolio--> 
+
+       <div class="row">
+          <div class="col-lg-12 text-center">
+            
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-right">
+            <div class="service-box">
+              <i ></i>
+              <h2>Other <br> Design</h2>
+              <p class="text-muted">These are some examples of designs i have ever made, banner designs, posters, flyers, promo ads etc. The usual software i use to design this Adobe Illustrator and Adobe Photoshop</p>
+                    <button type="button" data-toggle="modal" data-target="#mymodal" class="btn btn-primary btn-lg">See All</button>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 text-center">
+            <div class="service-box">
+             <div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="1800">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel2" data-slide-to="1"></li>
+                    <li data-target="#myCarousel2" data-slide-to="2"></li>
+                    <li data-target="#myCarousel3" data-slide-to="3"></li>
+                    <li data-target="#myCarousel3" data-slide-to="4"></li>
+                    <li data-target="#myCarousel3" data-slide-to="5"></li>
+                    <li data-target="#myCarousel3" data-slide-to="6"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="assets/image/other/poster.png">
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/other/poster2.png">
+                        <div class="carousel-caption">
+                            
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/other/poster3.png">
+                        <div class="carousel-caption">
+                           
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/other/poster4.png">
+                        <div class="carousel-caption">
+                           
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/other/poster5.png">
+                        <div class="carousel-caption">
+                           
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/other/poster6.png">
+                        <div class="carousel-caption">
+                           
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/other/poster7.png">
+                        <div class="carousel-caption">
+                           
+                        </div>
+                    </div>
+                </div>
+                 <a href="#myCarousel2" class="left carousel-control" role="button" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                 </a>  
+                 <a href="#myCarousel2" class="right carousel-control" role="button" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                 </a>
+               </div>
+            </div>
+          </div>
+  
+        </div>
+
+ <!--3rd portfolio-->
+ <div class="row">
+          <div class="col-lg-12 text-center">
+            
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 text-center">
+            <div class="service-box">
+             <div id="myCarousel3" class="carousel slide" data-ride="carousel" data-interval="2300">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel3" data-slide-to="1"></li>
+                    <li data-target="#myCarousel3" data-slide-to="2"></li>
+                    <li data-target="#myCarousel3" data-slide-to="3"></li>
+                    <li data-target="#myCarousel3" data-slide-to="4"></li>
+                    <li data-target="#myCarousel3" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="assets/image/3d/1.jpg">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/3d/2.jpg">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/3d/3.jpg">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/3d/5.jpg">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/image/3d/6.jpg">
+                        <div class="carousel-caption">
+                            <h1></h1>
+                        </div>
+                    </div>
+                </div>
+                 <a href="#myCarousel3" class="left carousel-control" role="button" data-slide="prev">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                 </a>  
+                 <a href="#myCarousel3" class="right carousel-control" role="button" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                 </a>
+               </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 text-left">
+            <div class="service-box">
+              <i ></i>
+              <h2>Design <br> 3D Modelling</h2>
+              <p class="text-muted">This is my design 3d modelling, i used to using 3Ds MAX software for my 3d Design, and usually i often design 3D assets for Game, Movie, Interior, Exterior etc.</p>
+                    <button type="button" data-toggle="modal" data-target="#mymodal" class="btn btn-primary btn-lg">See All</button>
+            </div>
+          </div>
+  
+        </div>       
+        
+
+</div>
+</section>
+    
+<section class="bg-primary" id="contact">
+      <div class="container">
+        <div class="row slideanim" >
+          <div class="col-lg-12 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="light">
+            <p>Ready to Hire me? That's great! Give me a call or send me an email and i will get back to you as soon as possible!</p><br>
+          </div>
+        </div>
+        <div class="row slideanim">
+          <div class="col-lg-6 ml-auto text-center">
+            <i class="fa fa-phone fa-3x sr-contact"></i>
+            <p>+6285311153062</p>
+          </div>
+          <div class="col-lg-6 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+            <p>
+              <a href="#">firmansyahferi29@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+<script src="assets/jquery/jquery-2.1.4.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/scrollreveal/scrollreveal.min.js"></script>
+<script src="assets/datatables/js/jquery.dataTables.min.js"></script>
+<script src="assets/datatables/js/dataTables.bootstrap.min.js"></script>
+<script src="assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/bootstrap/js/lightbox.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#imageCarousel').carousel();
+    });
+</script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+ // Closes responsive menu when a scroll trigger link is clicked
+  $(".navbar a, footer a[href='#myPage']").click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+
+
+})
+
+
+ // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#mainNav',
+    offset: 48
+  });
+
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(function() {
+    if ($("#mainNav").offset().top > 100) {
+      $("#mainNav").addClass("navbar-shrink");
+    } else {
+      $("#mainNav").removeClass("navbar-shrink");
+    }
+  });
+
+  // Scroll reveal calls
+  window.sr = ScrollReveal();
+  sr.reveal('.sr-icons', {
+    duration: 600,
+    scale: 0.3,
+    distance: '0px'
+  }, 200);
+  sr.reveal('.sr-button', {
+    duration: 1000,
+    delay: 200
+  });
+  sr.reveal('.sr-contact', {
+    duration: 600,
+    scale: 0.3,
+    distance: '0px'
+  }, 300);
+
+  // Magnific popup calls
+  $('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1]
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    }
+  });
+
+</script>
+
+
+
+<!-- Bootstrap modal -->
+
+<div class="modal fade" id="mymodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="text-center">Gallery</h3>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+            <h2 align="center">Logo Design</h2>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/1.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/1.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/2.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/2.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/4.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/4.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/5.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/5.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/6.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/6.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/7.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/7.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/8.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/8.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/9.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/9.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/10.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/10.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/11.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/11.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/13.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/13.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/14.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/14.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/15.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/15.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/16.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/16.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/17.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/17.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/18.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/18.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/3.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/3.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/logo/12.png" data-lightbox="Vacation">
+                      <img src="assets/image/logo/12.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+
+            <!--other design-->
+            <h2 align="center">Other Design</h2>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/poster.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/poster.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/poster2.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/poster2.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/poster4.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/poster4.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/poster5.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/poster5.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/poster6.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/poster6.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/poster7.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/poster7.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/d2.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/d2.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/poster3.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/poster3.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/d1.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/d1.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/other/d3.png" data-lightbox="Vacation">
+                      <img src="assets/image/other/d3.png" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+             <!--3d design-->
+             <h2 align="center">3D Design</h2>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/3d/1.jpg" data-lightbox="Vacation">
+                      <img src="assets/image/3d/1.jpg" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/3d/2.jpg" data-lightbox="Vacation">
+                      <img src="assets/image/3d/2.jpg" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/3d/3.jpg" data-lightbox="Vacation">
+                      <img src="assets/image/3d/3.jpg" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/3d/4.jpg" data-lightbox="Vacation">
+                      <img src="assets/image/3d/4.jpg" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border: 0px solid #000;"> 
+
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/3d/5.jpg" data-lightbox="Vacation">
+                      <img src="assets/image/3d/5.jpg" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6" >
+                  <div class="img-responsive" style="padding: 10px;">
+                    <a href="assets/image/3d/6.jpg" data-lightbox="Vacation">
+                      <img src="assets/image/3d/6.jpg" class="img-responsive">
+                    </a>
+                    
+                  </div>
+              </div>
+            </div>
+            
+
+      </div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
